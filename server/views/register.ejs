@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+      <div>
+            <h4>Register</h4>
+            <hr />
+            <div>
+                  <form action="/register" method="post">
+                        <div>
+                              <label>Username</label>
+                              <input type="text" name="username" placeholder="Enter username" required />
+                              <% if (errors.username.length) { %>
+                              <small><%= errors.username %></small>
+                              <% } %>
+                        </div>
+
+                        <div>
+                              <label>Email address</label>
+                              <input type="email" name="email" placeholder="Enter email" required />
+                              <% if (errors.email.length) { %>
+                              <small><%= errors.email %></small>
+                              <% } %>
+                        </div>
+
+                        <div>
+                              <label>Password</label>
+                              <input type="password" name="password" placeholder="Password" required />
+                        </div>
+
+                        <div>
+                              <div>
+                                    Have an account? Login
+                                    <a href="/login">here</a>.
+                              </div>
+                        </div>
+
+                        <button type="submit">Register</button>
+                  </form>
+            </div>
+      </div>
+</body>
+
+</html>

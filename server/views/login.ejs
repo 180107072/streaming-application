@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+      <body>
+            <div>
+                  <h4>Login</h4>
+
+                  <hr />
+                  <div>
+                        <form action="/login" method="post">
+                              <div>
+                                    <label>Email address</label>
+                                    <input
+                                          type="email"
+                                          name="email"
+                                          placeholder="Enter email"
+                                          required
+                                    />
+                                    <% if (errors.email.length) { %>
+                                    <small><%= errors.email %></small>
+                                    <% } %>
+                              </div>
+                              <div>
+                                    <label>Password</label>
+                                    <input
+                                          type="password"
+                                          name="password"
+                                          placeholder="Password"
+                                          required
+                                    />
+                                    <% if (errors.password.length) { %>
+                                    <small><%= errors.password %></small>
+                                    <% } %>
+                              </div>
+                              <div>
+                                    <div>
+                                          Don't have an account? Register
+                                          <a href="/register">here</a>.
+                                    </div>
+                              </div>
+                              <button type="submit">Login</button>
+                        </form>
+                  </div>
+            </div>
+      </body>
+</html>
